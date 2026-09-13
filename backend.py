@@ -597,40 +597,40 @@ app
 
 # Test Section
 
-config = {
-        "configurable": {
-            "thread_id": "test_thread_id_0020"
-        }
-    }
+# config = {
+#         "configurable": {
+#             "thread_id": "test_thread_id_0020"
+#         }
+#     }
 
-# -----------------------------
-# 10) Runner
-# -----------------------------
-def run(topic: str, as_of: Optional[str] = None):
-    if as_of is None:
-        as_of = date.today().isoformat()
+# # -----------------------------
+# # 10) Runner
+# # -----------------------------
+# def run(topic: str, as_of: Optional[str] = None):
+#     if as_of is None:
+#         as_of = date.today().isoformat()
 
-    out = app.invoke(
-        {
-            "topic": topic,
-            "mode": "",
-            "needs_research": False,
-            "queries": [],
-            "evidence": [],
-            "plan": None,
-            "as_of": as_of,
-            "recency_days": 7,
-            "sections": [],
-            "merged_md": "",
-            "md_with_placeholders": "",
-            "image_specs": [],
-            "final": "",
-        }, config=config
-    )
+#     out = app.invoke(
+#         {
+#             "topic": topic,
+#             "mode": "",
+#             "needs_research": False,
+#             "queries": [],
+#             "evidence": [],
+#             "plan": None,
+#             "as_of": as_of,
+#             "recency_days": 7,
+#             "sections": [],
+#             "merged_md": "",
+#             "md_with_placeholders": "",
+#             "image_specs": [],
+#             "final": "",
+#         }, config=config
+#     )
 
-    return out
+#     return out
 
 
-result = run("Roadmap to become an AI Engineer in 2027, in India?")
+# result = run("Roadmap to become an AI Engineer in 2027, in India?")
 
-print(result)
+# print(result)
